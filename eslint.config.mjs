@@ -50,6 +50,7 @@ export default [
           afterColon: true, // コロンの後にスペースを必須にする
         },
       ],
+      'no-var': 'error',
       'no-unused-vars': 'warn',
       'no-console': 'warn',
 
@@ -58,10 +59,11 @@ export default [
         'error',
         'always-multiline',
       ], // マルチラインの最後にカンマを強制
-      'indent': [
+      'indent': 'off', // @stylistic/indentを使用
+      '@stylistic/indent': [
         'error',
         2,
-      ], // インデントは2スペース
+      ],
       'no-trailing-spaces': 'error', // 行末の空白を禁止
       'eol-last': [
         'error',
@@ -72,6 +74,25 @@ export default [
         'error',
         'always',
       ], // アロー関数の引数に括弧を必須
+      'consistent-this': [
+        'error',
+        'self',
+      ], // thisの名前を指定
+      'no-lonely-if': 'error', // else内のifを禁止し、else ifを使用
+      'no-else-return': [
+        'error',
+        {allowElseIf: false},
+      ], // elseブロック内でのreturnを禁止、不要なインデントを削除
+
+      // 分割代入のルール
+      'prefer-destructuring': [
+        'error',
+        {
+          object: true,
+          array: false,
+        },
+      ], // オブジェクトの分割代入を推奨
+      'default-case': 'error', // switch文でのdefaultを必須にする
 
       // 横に長い文章の改行ルール
       'newline-per-chained-call': [
@@ -111,6 +132,22 @@ export default [
         'error',
         {multiline: true},
       ],
+
+      // 関数のルールルール
+      'func-style': [
+        'error',
+        'declaration',
+        {allowArrowFunctions: true},
+      ],
+      'prefer-arrow-callback': 'error', // コールバックにはアロー関数を推奨
+      'no-return-await': 'error', // 不必要なreturn awaitを禁止
+      'max-params': [
+        'warn',
+        3,
+      ], // 関数の引数を3つまでに制限
+
+      // モジュールのルール
+      'no-duplicate-imports': 'error', // 重複するimportを禁止
 
       // TypeScript向けルール（@typescript-eslintを使用）
       '@typescript-eslint/no-unused-vars': ['warn'],
