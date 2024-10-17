@@ -6,7 +6,6 @@
     "./lib"
   ],
   "main": "./lib/index.mjs",
-
   "scripts": {
     "lint": "eslint ./",
     "fix": "eslint --fix ./"
@@ -16,8 +15,11 @@
     "@eslint/js": "^9.12.0",
     "@stylistic/eslint-plugin": "^2.9.0",
     "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.11.0",
+    "prettier": "^3.3.3",
     "typescript-eslint": "^8.9.0"
   },
   "peerDependencies": {
