@@ -1,12 +1,12 @@
 {
   "name": "@fanm_inc/eslint-config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "ISC",
   "files": [
     "./eslint.config.mjs"
   ],
   "packageManager": "pnpm@8.12.1+sha1.aa961ffce9b6eaa56307d9b5ff7e984f25b7eb58",
-  "devDependencies": {
+  "dependencies": {
     "@eslint/js": "^9.12.0",
     "@stylistic/eslint-plugin": "^2.9.0",
     "eslint": "^9.12.0",
