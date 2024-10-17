@@ -34,10 +34,7 @@ export default [
         'error',
         'always',
       ],
-      'object-curly-spacing': [
-        'error',
-        'never',
-      ],
+      'object-curly-spacing': 'off', // @stylistic/object-curly-spacingルールを使用
       '@stylistic/object-curly-spacing': [
         'error',
         'never',
@@ -116,16 +113,16 @@ export default [
       ],
 
       // TypeScript向けルール（@typescript-eslintを使用）
-      '@typescript-eslint/no-unused-vars': ['error'],
-      '@typescript-eslint/explicit-function-return-type': ['error'],
+      '@typescript-eslint/no-unused-vars': ['warn'],
+      '@typescript-eslint/explicit-function-return-type': ['warn'], // 推論ができない場合に警告
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-non-null-assertion': 'warn',
 
       // React向けルール
       'react/jsx-boolean-value': [
         'error',
-        'always',
-      ], // JSXのブール値は明示
+        'never',
+      ], // JSXのブール値は暗示
       'react/jsx-no-duplicate-props': ['error'], // JSXでプロパティの重複を禁止
       'react/jsx-curly-spacing': [
         'error',
