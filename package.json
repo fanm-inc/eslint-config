@@ -1,6 +1,6 @@
 {
   "name": "@fanm_inc/eslint-config",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "license": "ISC",
   "files": [
     "./lib"
